@@ -257,7 +257,9 @@ Ghost **16 Windows ਮਜ਼ਬੂਤੀ ਫੰਕਸ਼ਨਸ** ਅਤੇ **Azu
 ### ਸਿਕਿਉਰਿਟੀ ਮੁਲਾਂਕਣ
 ```powershell
 # Ghost ਮਾਡਿਊਲ ਲੋਡ ਕਰੋ
-IEX(Invoke-WebRequest 'https://raw.githubusercontent.com/jimrtyler/Ghost/main/Ghost.ps1')
+Invoke-WebRequest 'https://raw.githubusercontent.com/jimrtyler/Ghost/main/Ghost.ps1' -OutFile .\Ghost.ps1
+Get-Content .\Ghost.ps1
+. .\Ghost.ps1
 
 # ਮੌਜੂਦਾ ਸਿਕਿਉਰਿਟੀ ਸਥਿਤੀ ਦੀ ਜਾਂਚ ਕਰੋ
 Get-Ghost
@@ -285,7 +287,9 @@ Set-Ghost -SMBv1 -RDP -USBStorage -Intune
 
 ### ਵਿਕਲਪ 1: ਸਿੱਧਾ ਡਾਊਨਲੋਡ (ਟੈਸਟਿੰਗ)
 ```powershell
-IEX(Invoke-WebRequest 'https://raw.githubusercontent.com/jimrtyler/Ghost/main/Ghost.ps1')
+Invoke-WebRequest 'https://raw.githubusercontent.com/jimrtyler/Ghost/main/Ghost.ps1' -OutFile .\Ghost.ps1
+Get-Content .\Ghost.ps1
+. .\Ghost.ps1
 ```
 
 ### ਵਿਕਲਪ 2: ਮਾਡਿਊਲ ਇੰਸਟਾਲੇਸ਼ਨ
